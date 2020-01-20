@@ -10,7 +10,7 @@ const currPlaceholder = document.getElementById('notifyVal');
 const clsBtn = document.getElementById('closeBtn');
 
 clsBtn.addEventListener('click', function(event) {
-    
+
     var window = remote.getCurrentWindow(); // close current window only
     window.close();
 
@@ -37,5 +37,3 @@ ipc.on('currencyVal', function(event, curr, currSym) {
     currPlaceholder.placeholder = curr + ' (' + currSym + ')'; // set display value to current currency
 
 });
-
-
